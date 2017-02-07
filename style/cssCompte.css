@@ -1,0 +1,43 @@
+
+/* CSS comptePage.html------------------------------------------------------------------------------------------------*/
+.forCompte{
+    margin: 15px 0;
+}
+
+.forCompte label{
+    display: inline-block;
+    width: 200px;
+}
+
+#modif-button,#valid-button{
+    width: 89px;
+    background-color: black;
+    color: white;
+    border: transparent;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+.statut{
+width: 200px;
+}
+
+#aletre_carte{
+    display: none;
+    color: red;
+    font-size: small;
+    margin: 6px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
