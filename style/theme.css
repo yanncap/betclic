@@ -550,6 +550,17 @@ footer{
     font-size: 40px;
 }
 
+.listeMenuMob li{
+    width: 100px;
+    margin: 20px 50px;
+    text-align: center;
+}
+
+.listeMenuMob a{
+    color: black;
+    font-weight: bold;
+}
+
 /*CSS ID PERSO---------------------------------------------------------------------------------------*/
 
 

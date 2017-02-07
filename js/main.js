@@ -44,7 +44,8 @@ function fausseConnection(choix){
         tempPassword = $("#passwordM").val();
     }
     if (tempPseudo != "" && tempPassword != ""){
-        alert("samarche");
+        $("#titreCoo").html("Connecté !")
+        $(".liForm").html("<p>Bienvenue : "+tempPseudo+"</p><p>Votre Solde est de: 20.50€</p><a href=''>Se Déconnecter</a>");
     }
 }
 
