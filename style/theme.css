@@ -581,7 +581,7 @@ footer{
     background-image: url("../img/bottombox.jpg");
 }
 
-#ok{
+.ok{
     display: inline-block;
     float: right;
     width: 40px;
