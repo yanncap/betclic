@@ -109,16 +109,17 @@
             <li class="liForm">
                 <form class="formulaire">
                     <div class="triche">
-                        <input class="pseudo" type="text" name="Pseudo" placeholder="Pseudo">
+                        <input class="pseudo" id="pseudoS" type="text" name="Pseudo" placeholder="Pseudo">
                         <a href="#" class="lienForm"><i><u>oublié?</u></i></a>
                     </div>
                     <span class="triche pass">
-                        <input class="password" type="password" name="password" placeholder="Mot de passe">
+                        <input class="password" id="passwordS" type="password" name="password" placeholder="Mot de passe">
                         <a href="#" class="lienForm"><i><u>oublié?</u></i></a>
                     </span>
-                    <input type="submit" value="OK" class="ok">
+                    <!--<input type="submit" value="OK" class="ok"> -->
+                    <a href="#" class="ok" id="okS">OK</a>
                 </form>
-                <p class="paraInscription">Crée un Compte? <a href="#" class="lienForm"><u>Inscrivez Vous</u></a></p>
+                <p class="paraInscription">Crée un Compte? <a href="./html/inscription.html" class="lienForm"><u>Inscrivez Vous</u></a></p>
 
             </li>
 
@@ -133,31 +134,32 @@
         <h2 class="titre2Lat">Connexion</h2>
         <form class="formulaire">
             <div class="triche">
-                <input class="pseudo" type="text" name="Pseudo" placeholder="Pseudo">
+                <input class="pseudo" type="text" name="Pseudo" id="pseudoM" placeholder="Pseudo">
                 <a href="#"><i><u>oublié?</u></i></a>
             </div>
             <span class="triche pass">
-                        <input class="password" type="password" name="password" placeholder="Mot de passe">
+                        <input class="password" id="passwordM" type="password" name="password" placeholder="Mot de passe">
                         <a href="#"><i><u>oublié?</u></i></a>
                     </span>
-            <input type="submit" value="OK" class="ok">
+            <!--<input type="submit" value="OK" class="ok"> -->
+            <a href="#" class="ok" id="okM">OK</a>
         </form>
-        <p class="paraInscription">Crée un Compte? <a href="./"><u>Inscrivez Vous</u></a></p>
+        <p class="paraInscription">Crée un Compte? <a href="./html/inscription.html"><u>Inscrivez Vous</u></a></p>
     </nav>
 
 
     <nav class="menu">
         <ul class="container flexStyleH">
-            <li id="menuActif">
+            <li id="menuActif" class="noMob">
                 <a href="./"><i>ACCEUIL</i></a>
             </li>
-            <li>
+            <li class="noMob">
                 <a href="./"><i>PARI</i></a>
             </li>
-            <li>
+            <li class="noMob">
                 <a href="./"><i>CONTACT</i></a>
             </li>
-            <li>
+            <li class="noMob">
                 <a href="./"><i>A PROPOS</i></a>
             </li>
             <li id="responSearch_700px">

@@ -630,6 +630,7 @@ footer{
     .menuMobile{display: block;}
     .btnDicoMob{display: block;}
     .dico{display: none;}
+    .noMob{display: none;}
 }
 
 

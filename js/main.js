@@ -4,9 +4,12 @@
 var boolDico = false;
 
 $(function(){
-    $(".menuMBouton").on("click", function(){lateral()})
-    $(".shadow").on("click", function(){lateralFin()})
-    $(".btnDicoMob").on("click", function(){affiDico()})
+    $(".menuMBouton").on("click", function(){lateral()});
+    $(".shadow").on("click", function(){lateralFin()});
+    $(".btnDicoMob").on("click", function(){affiDico()});
+
+    $("#okS").on("click", function(){fausseConnection(1)});
+    $("#okM").on("click", function(){fausseConnection(2)});
 });
 
 function lateral(){
@@ -28,6 +31,20 @@ function affiDico(){
         boolDico = false;
         $(".dico").hide();
         $(".btnDicoMob i").html("vertical_align_bottom")
+    }
+}
+
+function fausseConnection(choix){
+    var tempPseudo,tempPassword;
+    if(choix ==1){
+        tempPseudo = $("#pseudoS").val();
+        tempPassword = $("#passwordS").val();
+    }else{
+        tempPseudo = $("#pseudoM").val();
+        tempPassword = $("#passwordM").val();
+    }
+    if (tempPseudo != "" && tempPassword != ""){
+        alert("samarche");
     }
 }
 
