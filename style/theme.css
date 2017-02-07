@@ -89,7 +89,7 @@ li{
 }
 
 .contenu{
-    width: 700px;
+    max-width: 700px;
 }
 
 .aCote{
@@ -102,7 +102,7 @@ footer{
     background: #555;
 }
 
-H3{
+.titre3{
     margin: 5px 0 0 0;
     font-size: 100%;
 }
@@ -186,13 +186,13 @@ H3{
     width: 200px;
 }
 
-.liForm p{
+.paraInscription{
     margin-top: 2px;
     font-size: 80%;
     text-align: right;
 }
 
-.liForm a{
+.lienform{
     color: #ff0000;
     font-weight: bold;
 }
@@ -214,6 +214,22 @@ H3{
 
 .pass{
 
+}
+
+.menuMobile{
+    display: none ;
+    position: relative;
+    height: 0;
+}
+
+.menuMBouton{
+    position : absolute;
+    top: -50px;
+    color: black;
+}
+
+.menuClic{
+    font-size: 32px;
 }
 
 .menu{
@@ -493,6 +509,46 @@ H3{
     font-weight: bold;
 }
 
+/* CSS menu lateral----------------------------------------------------------------------------------*/
+
+.shadow{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+
+.menuLateral{
+    display: none;
+    position: fixed;
+    width: 220px;
+    background: white;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: calc(50% - 110px);
+    box-shadow: 5px 5px 10px #000;
+}
+
+.titre2Lat{
+    text-align: center;
+    width: 100%;
+}
+
+.btnDicoMob{
+    display: none;
+    width: 40px;
+    margin-left: calc(50% - 20px);
+}
+
+.btnDicoMob i{
+    font-size: 40px;
+}
 
 /*CSS ID PERSO---------------------------------------------------------------------------------------*/
 
@@ -503,11 +559,11 @@ H3{
     color: #DDD;
 }
 
-#pseudo{
+.pseudo{
     width: calc(100% - 53px);
 }
 
-#password{
+.password{
     width: calc(100% - 100px);
 }
 
@@ -544,11 +600,8 @@ H3{
     width: 250px;
 }
 
-
-/* CSS material IO ---------------------------------------------------------------------------------*/
-
-.material-icons{
-    font-size: 18px;
+.handCursor{
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES------------------------------------------------------------------------------------*/
@@ -574,6 +627,9 @@ H3{
     .infoParis{width: calc(100% - 60px);}
     .topParis ul{justify-content: space-around;}
     .topParis nav{display: flex;flex-wrap: wrap;justify-content: center;}
+    .menuMobile{display: block;}
+    .btnDicoMob{display: block;}
+    .dico{display: none;}
 }
 
 
