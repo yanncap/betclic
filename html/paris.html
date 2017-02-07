@@ -152,11 +152,46 @@
     </ul>
 </nav>
 
+<div class="shadow"></div>
+<div class="modal2">
+    <div id="encadreValidationPari">
+        <form method="post" action="#">
+            <h3>Récapitulatif de votre paris :</h3>
+            <div class="ligneStylay"></div>
+            <div>
+                <p>Match : Bordeaux - Dijon</p><br>
+                <p>Résultat : <span id="victoire">Bordeaux</span></p><br>
+                <div>
+                    <span>Cote : 1.58</span>
+                    <span> </span>
+                    <span class="spanMise">
+                            <label for="mise">Votre mise :</label>
+                            <input id="mise" type="text">
+                        </span>
+                </div>
+                <span class="spanMise">Gains possibles : </span>
+            </div><br>
+            <div class="ligneStylay"></div>
+            <a href="paris.html">Retour aux paris</a>
+            <input class="submitButton" id="validerParis" type="button" name="validerPari" value="Parier maintenant"><br>
+        </form>
+    </div>
+    <div id="encadreConnection">
+        <h3>Se connecter</h3>
+        <div class="ligneStylay"></div>
+        <input id="loginModal" type="text" name="login" placeholder="Identifiant"><br>
+        <input id="passwordModal" type="text" name="password" placeholder="Mot de passe"><br>
+        <input id="validerConnexion" type="submit" name="connection" value="Se connecter">
+        <p>Pas encore inscrit?</p>
+        <a href="inscription.html">Inscrivez-vous !</a>
+    </div>
+
+</div>
 
 <main class="container principale">
     <article class="contenu">
+        <div class="logoCompetition"></div>
         <div class="topParis">
-            <h1 class="titreParis">Ligue 1</h1>
             <h3>Matchs du Samedi 25 février</h3>
             <div class="ligneStylay"></div>
             <ul class="ligneParis colonnePari">
@@ -174,9 +209,9 @@
                     <p><span class="ballon"></span>Football, Coupe de France</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic"><a href="./paris_validation.html">1.58</a></li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vicA"><a href="./paris_validation.html">1.58</a></li>
+                <li class="nul">3.80</li>
+                <li class="vicB">5.50</li>
                 <li class="typePari">+76</li>
                 <li class="stat">
                     <a href="#"><img src="img/stats.png"></a>
@@ -331,47 +366,18 @@
         <form >
             <input class="recherche" type="search" placeholder="Indiquez votre requête">
         </form>
-        <h3>Top 5 des paris combinés</h3>
+        <h3>Liste des compétitions</h3>
         <div class="ligneStylay"></div>
-
-        <div class="topCombine">
             <ul>
-                <li>
-                    <span class="medaille"></span>
-                    <span class="spanDetail">
-                            <p><span class="nomVic">Mathieu P.</span><span class="gain">26 000 €</span></p>
-                            <p><span>pari: 10 €</span><span>Cote: 1751,01</span></p>
-                        </span>
-                </li>
-                <li>
-                    <span class="medaille"></span>
-                    <span class="spanDetail">
-                            <p><span class="nomVic">Mathieu P.</span><span class="gain">26 000 €</span></p>
-                            <p><span>pari: 10 €</span><span>Cote: 1751,01</span></p>
-                        </span>
-                </li>
-                <li>
-                    <span class="medaille"></span>
-                    <span class="spanDetail">
-                            <p><span class="nomVic">Mathieu P.</span><span class="gain">26 000 €</span></p>
-                            <p><span>pari: 10 €</span><span>Cote: 1751,01</span></p>
-                        </span>
-                </li>
-                <li>
-                    <span class="medaille"></span>
-                    <span class="spanDetail">
-                            <p><span class="nomVic">Mathieu P.</span><span class="gain">26 000 €</span></p>
-                            <p><span>pari: 10 €</span><span>Cote: 1751,01</span></p>
-                        </span>
-                </li>
-                <li>
-                    <span class="medaille"></span>
-                    <span class="spanDetail">
-                            <p><span class="nomVic">Mathieu P.</span><span class="gain">26 000 €</span></p>
-                            <p><span>pari: 10 €</span><span>Cote: 1751,01</span></p>
-                        </span>
-                </li>
+                <li><a href="#">Ligue1</a></li>
+                <li><a href="#">Ligue2</a></li>
+                <li><a href="#">Première league</a></li>
+                <li><a href="#">Série A</a></li>
+                <li><a href="#">Liga</a></li>
+                <li><a href="#">Bundesliga</a></li>
             </ul>
+        <div class="topCombine">
+
         </div>
 
         <div class="pubNav"></div>
@@ -381,7 +387,6 @@
             <p>Retrouvez les meilleurs paris sportif à tout moment sur betclic !<br>
                 <a href="#">En savoir plus sur le paris en ligne !</a>
             </p>
-
         </div>
     </aside>
 
@@ -429,5 +434,6 @@
         crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="./js/main.js" ></script>
+<script type="text/javascript" src="../js/paris.js" ></script>
 </body>
 </html>
