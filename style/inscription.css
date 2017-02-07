@@ -1,0 +1,68 @@
+.DPinscription, .LRinscription, .DCinscription{
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.forInscrip{
+    width: 80% ;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.forInscrip label{
+    display: inline-block;
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.forInscrip .required{
+    color:red;
+}
+
+.conditions{
+    margin-top: 10px;
+}
+
+.forInscrip .annulerInsc, .forInscrip .validerInsc{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+    margin: 20px;
+}
+
+
+input:required {
+    font-style: underline;
+}
+
+
+
+/* MEDIA QUERIES------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 960px){
+    aside{display: none;}
+    main{justify-content: center;}
+    .risqueLi{display: none;}
+    .risqueJouer ul{justify-content: center;}
+    #responSearch{display: inline;}
+}
+
+
+@media only screen and (max-width: 730px){
+    article{width: 100%;}
+    .risqueJouer{height: auto;}
+    .nowInUl,.headSite{justify-content: center;}
+    .pub,.headSite li:nth-child(2),.headSite li:nth-child(3){display: none;}
+    #responSearch_700px{width: 100%}
+    .menu ul{justify-content: space-between;}
+    #responSearch{width: 100%;}
+    .ligneParis{flex-wrap: wrap;}
+    .infoParis{width: calc(100% - 60px);}
+    .topParis ul{justify-content: space-around;}
+    .topParis nav{display: flex;flex-wrap: wrap;justify-content: center;}
+    .menuMobile{display: block;}
+    .btnDicoMob{display: block;}
+    .dico{display: none;}
+}
