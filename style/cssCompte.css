@@ -9,7 +9,7 @@
     width: 200px;
 }
 
-#modif-button,#valid-button,#annuler-button{
+#modif-button,#valid-button,#annuler-button,#accueil-button{
     width: 89px;
     background-color: black;
     color: white;
@@ -21,6 +21,13 @@
 }
 #valid-button,#annuler-button{
     display: none;
+}
+
+#accueil-button{
+    float: right;
+    background-color: red;
+    width: 185px !important;
+
 }
 
 .statut{
@@ -37,13 +44,7 @@ width: 200px;
     margin-top: 20px;
 }
 
-input:required{
 
-}
-
-.forCompte .statut{
-
-}
 
 
 
