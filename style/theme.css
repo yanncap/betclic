@@ -89,7 +89,7 @@ li{
 }
 
 .contenu{
-    max-width: 700px;
+    width: 700px;
 }
 
 .aCote{
@@ -264,13 +264,51 @@ footer{
     border: solid 1px #777;
 }
 
+
+/* Caroussel----------------------------------------------------------------------------*/
 .caroussel{
+    position: relative;
     width: 100%;
     height: 235px;
-    background-image: url("../img/happy_2016.jpg");
+    background-image: url("../img/foot4.jpg");
     margin: 10px 0;
     border-radius: 10px;
+    overflow: hidden;
 }
+
+.fondCarou{
+    position: absolute;
+    width: 3000px;
+}
+
+.itemCarou{
+    display: inline-block;
+    width: 700px;
+    overflow: hidden;
+}
+
+.lienCarou{
+    position: absolute;
+    width: 700px;
+    height: 75px;
+    background: rgba(0,0,0,0.5);
+    top: 160px;
+    padding: 10px 0 0 20px;
+}
+
+.titreItem1{
+    font-size: 120%;
+    color: red;
+    font-weight: bold;
+}
+
+.titreItem2{
+    font-size: 150%;
+    color: white;
+    font-weight: bold;
+}
+
+/* top paris------------------------------------------------------------------------------*/
 
 .topParis{
     width: 100%;
@@ -548,6 +586,7 @@ footer{
 
 .btnDicoMob i{
     font-size: 40px;
+    color: white;
 }
 
 .listeMenuMob li{
@@ -627,7 +666,7 @@ footer{
 
 
 @media only screen and (max-width: 730px){
-    article{width: 100%;}
+    .contenu{width: 100%;}
     .risqueJouer{height: auto;}
     .nowInUl,.headSite{justify-content: center;}
     .pub,.headSite li:nth-child(2),.headSite li:nth-child(3){display: none;}
