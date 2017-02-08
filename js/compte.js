@@ -5,11 +5,8 @@
 (function ($) {
     $(function(){
 
-        value = $('#experation').attr('value');
-        if(value == ""){
+      validerChamps();
 
-            $('.aletre_carte').css("display","inline-block");
-        }
 
         $('#modif-button').on('click',function () {
 
@@ -23,6 +20,7 @@
             $('.statut').attr("disabled",true);
             $(this).css("display","none");
             $('#annuler-button').css("display","none");
+            validerChamps();
 
         })
         $('#annuler-button').on('click',function () {
@@ -30,8 +28,19 @@
             $('.statut').attr("disabled",true);
             $(this).css("display","none");
             $('#valid-button').css("display","none");
+            validerChamps();
 
         })
     });
+
+    function validerChamps(){
+        if ($('#nomPorteur').val()==""||$('#numCarte').val()==""||$('#codeSecurite').val()==""||$('#experation').val()==""){
+            $('.aletre_carte').css("display","inline-block");
+        }
+        else{
+            $('.aletre_carte').css("display","none");
+        }
+    }
+
 
 })(jQuery);
