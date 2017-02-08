@@ -190,27 +190,27 @@
 </nav>
 
 <div class="shadow"></div>
-<div class="modal2">
+<div class="modal">
     <div id="encadreValidationPari">
         <form method="post" action="#">
             <h3>Récapitulatif de votre paris :</h3>
             <div class="ligneStylay"></div>
             <div>
                 <p id="selectedMatch">Match : Bordeaux - Dijon</p><br>
-                <p id="pariSelected">Résultat : <span class="colorRed">Bordeaux</span></p><br>
+                <p id="pariSelected">Résultat : <span class="colorInformation">Bordeaux</span></p><br>
                 <div>
-                    <span>Cote :</span><span id="cote" class="colorRed">1.58</span>
+                    <span>Cote :</span><span id="cote" class="colorInformation">1.58</span>
                     <span class="spanMise">
                             <label for="miseInput">Votre mise :</label>
                             <input id="miseInput" type="text">€
                     </span>
                 </div>
                 <span class="spanMise">Gains possibles :</span>
-                <span id="gainPoentiels" class="colorRed">0.00</span>€
+                <span id="gainPoentiels" class="colorInformation">0.00</span>€
             </div><br>
             <div class="ligneStylay"></div>
             <a href="paris.html">Retour aux paris</a>
-            <input class="submitButton" id="validerParis" type="button" name="validerPari" value="Parier maintenant"><br>
+            <input class="btn btn-submit-paris" id="validerParis" type="button" name="validerPari" value="Parier maintenant"><br>
             <span id="parisValide"></span>
         </form>
     </div>
@@ -219,7 +219,7 @@
         <div class="ligneStylay"></div>
         <input id="loginModal" type="text" name="login" placeholder="Identifiant"><br>
         <input id="passwordModal" type="text" name="password" placeholder="Mot de passe"><br>
-        <input id="validerConnexion" type="submit" name="connection" value="Se connecter">
+        <input id="validerConnexion" class="btn btn-submit-connection" type="submit" name="connection" value="Se connecter">
         <p>Pas encore inscrit?</p>
         <a href="inscription.html">Inscrivez-vous !</a>
     </div>
@@ -247,7 +247,7 @@
                     <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic"><a>1.58</a></li>
+                <li><button class="vic">1.58</button></li>
                 <li class="vic"><a>3.80</a></li>
                 <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
