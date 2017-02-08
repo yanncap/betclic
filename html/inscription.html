@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>Presentation of my company | My Site</title>
+    <title> Inscription | My Site</title>
     <meta name="apple-mobile-web-app-title" content="Presentation of my company | My Site">
     <meta name="application-name" content="Presentation of my company | My Site">
     <meta property="og:title" content="Presentation of my company | My Site">
@@ -86,11 +86,12 @@
             </li>
         </ul>
     </div>
+
     <header class="container">
 
         <ul class="flexStyleH headSite">
             <li>
-                <a href="./" class="logo"><img src="../img/logo.png" alt="logo"></a>
+                <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
             </li>
             <li>
                 <ul class="flexStyleH miniMenu">
@@ -108,16 +109,17 @@
             <li class="liForm">
                 <form class="formulaire">
                     <div class="triche">
-                        <input class="pseudo" type="text" name="Pseudo" placeholder="Pseudo">
+                        <input class="pseudo" id="pseudoS" type="text" name="Pseudo" placeholder="Pseudo">
                         <a href="#" class="lienForm"><i><u>oublié?</u></i></a>
                     </div>
                     <span class="triche pass">
-                        <input class="password" type="password" name="password" placeholder="Mot de passe">
+                        <input class="password" id="passwordS" type="password" name="password" placeholder="Mot de passe">
                         <a href="#" class="lienForm"><i><u>oublié?</u></i></a>
                     </span>
-                    <input type="submit" value="OK" class="ok">
+                    <!--<input type="submit" value="OK" class="ok"> -->
+                    <a href="#" class="ok" id="okS">OK</a>
                 </form>
-                <p class="paraInscription">Crée un Compte? <a href="#" class="lienForm"><u>Inscrivez Vous</u></a></p>
+                <p class="paraInscription">Crée un Compte? <a href="./html/inscription.html" class="lienForm"><u>Inscrivez Vous</u></a></p>
 
             </li>
 
@@ -127,16 +129,75 @@
         </div>
     </header>
 
+    <div class="shadow"></div>
+    <nav class="menuLateral">
+        <h2 class="titre2Lat" id="titreCoo">Connexion</h2>
+        <div class="liForm">
+            <form class="formulaire">
+                <div class="triche">
+                    <input class="pseudo" type="text" name="Pseudo" id="pseudoM" placeholder="Pseudo">
+                    <a href="#"><i><u>oublié?</u></i></a>
+                </div>
+                <span class="triche pass">
+                            <input class="password" id="passwordM" type="password" name="password" placeholder="Mot de passe">
+                            <a href="#"><i><u>oublié?</u></i></a>
+                        </span>
+                <!--<input type="submit" value="OK" class="ok"> -->
+                <a href="#" class="ok" id="okM">OK</a>
+            </form>
+            <p class="paraInscription">Crée un Compte? <a href="./html/inscription.html"><u>Inscrivez Vous</u></a></p>
+        </div>
+        <div class="ligneStylay"></div>
+        <h2 class="titre2Lat">Navigation</h2>
+        <ul class="listeMenuMob">
+            <li>
+                <a href="#"><i>ACCEUIL</i></a>
+            </li>
+            <li>
+                <a href="html/paris.html"><i>PARI</i></a>
+            </li>
+            <li>
+                <a href="#"><i>CONTACT</i></a>
+            </li>
+            <li>
+                <a href="#"><i>A PROPOS</i></a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <nav class="menu">
+        <ul class="container flexStyleH">
+            <li id="menuActif" class="noMob">
+                <a href="#"><i>ACCEUIL</i></a>
+            </li>
+            <li class="noMob">
+                <a href="html/paris.html"><i>PARI</i></a>
+            </li>
+            <li class="noMob">
+                <a href="#"><i>CONTACT</i></a>
+            </li>
+            <li class="noMob">
+                <a href="#"><i>A PROPOS</i></a>
+            </li>
+            <li id="responSearch_700px">
+                <form action="html/paris.html">
+                    <input id="responSearch" type="search" placeholder="Recherchez un pari sportif">
+                </form>
+            </li>
+        </ul>
+    </nav>
+
     <main class="container">
 
-        <H1>Formulmaire d'incription</H1>
+        <H1>Formulmaire d'inscription</H1>
         <div class="ligneStylay"></div>
         <p>Pour des raisons d'ordre légal, vous devez fournir des données correctes pour la confirmation de votre compte.
             <br>
             Veuillez renseigner tout les champs suivi d'une *.
         </p>
         <br>
-        <form class="forInscrip" id="Verif" name="Verif" method="post" action="#">
+        <form class="forInscrip" id="Verif" name="Verif" method="post" action="comptePage.html">
             <fieldset>
                 <legend class="DPinscription"> DONNÉES PERSONNELLES</legend>
             <label for="prenom"> Prénom <span class="required">*</span> </label>
@@ -476,6 +537,6 @@
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="./js/main.js" ></script>
+    <script type="text/javascript" src="../js/main.js" ></script>
 </body>
 </html>
