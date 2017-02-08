@@ -10,8 +10,7 @@
 }
 
 #modif-button,#valid-button,#annuler-button,#accueil-button{
-    width: 89px;
-    background-color: black;
+    background-color: dodgerblue;
     color: white;
     border: transparent;
     border-radius: 3px;
@@ -19,14 +18,17 @@
     margin-top: 12px;
     font-size: 18px;
 }
-#valid-button,#annuler-button{
+/*#valid-button,#annuler-button{
     display: none;
+}*/
+
+#annuler-button{
+    background-color: gray!important;
 }
 
 #accueil-button{
     float: right;
     background-color: red;
-    width: 185px !important;
 
 }
 
@@ -35,7 +37,7 @@ width: 200px;
 }
 
 .aletre_carte{
-    display: none;
+    /*display: none;*/
     color: red;
     font-size: small;
     margin: 6px 0;
