@@ -92,7 +92,7 @@
 
     <ul class="flexStyleH headSite">
         <li>
-            <a href="./" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <a href="#" class="logo"><img src="../img/logo.png" alt="logo"></a>
         </li>
         <li>
             <ul class="flexStyleH miniMenu">
@@ -110,16 +110,17 @@
         <li class="liForm">
             <form class="formulaire">
                 <div class="triche">
-                    <input class="pseudo" type="text" name="Pseudo" placeholder="Pseudo">
+                    <input class="pseudo" id="pseudoS" type="text" name="Pseudo" placeholder="Pseudo">
                     <a href="#" class="lienForm"><i><u>oublié?</u></i></a>
                 </div>
                 <span class="triche pass">
-                        <input class="password" type="password" name="password" placeholder="Mot de passe">
+                        <input class="password" id="passwordS" type="password" name="password" placeholder="Mot de passe">
                         <a href="#" class="lienForm"><i><u>oublié?</u></i></a>
                     </span>
-                <input type="submit" value="OK" class="ok">
+                <!--<input type="submit" value="OK" class="ok"> -->
+                <a href="#" class="ok" id="okS">OK</a>
             </form>
-            <p class="paraInscription">Crée un Compte? <a href="#" class="lienForm"><u>Inscrivez Vous</u></a></p>
+            <p class="paraInscription">Crée un Compte? <a href="./html/inscription.html" class="lienForm"><u>Inscrivez Vous</u></a></p>
 
         </li>
 
@@ -129,20 +130,56 @@
     </div>
 </header>
 
+<div class="shadow"></div>
+<nav class="menuLateral">
+    <h2 class="titre2Lat" id="titreCoo">Connexion</h2>
+    <div class="liForm">
+        <form class="formulaire">
+            <div class="triche">
+                <input class="pseudo" type="text" name="Pseudo" id="pseudoM" placeholder="Pseudo">
+                <a href="#"><i><u>oublié?</u></i></a>
+            </div>
+            <span class="triche pass">
+                            <input class="password" id="passwordM" type="password" name="password" placeholder="Mot de passe">
+                            <a href="#"><i><u>oublié?</u></i></a>
+                        </span>
+            <!--<input type="submit" value="OK" class="ok"> -->
+            <a href="#" class="ok" id="okM">OK</a>
+        </form>
+        <p class="paraInscription">Crée un Compte? <a href="./inscription.html"><u>Inscrivez Vous</u></a></p>
+    </div>
+    <div class="ligneStylay"></div>
+    <h2 class="titre2Lat">Navigation</h2>
+    <ul class="listeMenuMob">
+        <li>
+            <a href="../index.html"><i>ACCEUIL</i></a>
+        </li>
+        <li>
+            <a href="#"><i>PARI</i></a>
+        </li>
+        <li>
+            <a href="contact.html"><i>CONTACT</i></a>
+        </li>
+        <li>
+            <a href="apropos.html"><i>A PROPOS</i></a>
+        </li>
+    </ul>
+</nav>
+
 
 <nav class="menu">
     <ul class="container flexStyleH">
-        <li id="menuActif">
-            <a href="./"><i>SPORT</i></a>
+        <li id="menuActif" class="noMob">
+            <a href="../index.html"><i>ACCEUIL</i></a>
         </li>
-        <li>
-            <a href="./"><i>LIVE</i></a>
+        <li class="noMob">
+            <a href="#"><i>PARI</i></a>
         </li>
-        <li>
-            <a href="./"><i>TURF</i></a>
+        <li class="noMob">
+            <a href="contact.html"><i>CONTACT</i></a>
         </li>
-        <li>
-            <a href="./"><i>POKER</i></a>
+        <li class="noMob">
+            <a href="apropos.html"><i>A PROPOS</i></a>
         </li>
         <li id="responSearch_700px">
             <form >
@@ -159,21 +196,22 @@
             <h3>Récapitulatif de votre paris :</h3>
             <div class="ligneStylay"></div>
             <div>
-                <p>Match : Bordeaux - Dijon</p><br>
-                <p>Résultat : <span id="victoire">Bordeaux</span></p><br>
+                <p id="selectedMatch">Match : Bordeaux - Dijon</p><br>
+                <p id="pariSelected">Résultat : <span class="colorRed">Bordeaux</span></p><br>
                 <div>
-                    <span>Cote : 1.58</span>
-                    <span> </span>
+                    <span>Cote :</span><span id="cote" class="colorRed">1.58</span>
                     <span class="spanMise">
-                            <label for="mise">Votre mise :</label>
-                            <input id="mise" type="text">
-                        </span>
+                            <label for="miseInput">Votre mise :</label>
+                            <input id="miseInput" type="text">€
+                    </span>
                 </div>
-                <span class="spanMise">Gains possibles : </span>
+                <span class="spanMise">Gains possibles :</span>
+                <span id="gainPoentiels" class="colorRed">0.00</span>€
             </div><br>
             <div class="ligneStylay"></div>
             <a href="paris.html">Retour aux paris</a>
             <input class="submitButton" id="validerParis" type="button" name="validerPari" value="Parier maintenant"><br>
+            <span id="parisValide"></span>
         </form>
     </div>
     <div id="encadreConnection">
@@ -206,71 +244,71 @@
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vicA"><a href="./paris_validation.html">1.58</a></li>
-                <li class="nul">3.80</li>
-                <li class="vicB">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
-                    <p>Bordeaux - Dijon</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
+                    <p>Stade Rennais FC- Paris SG</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
-                    <p>Bordeaux - Dijon</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
+                    <p>AS Nancy-Lorraine - Dijon</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
-                    <p>Bordeaux - Dijon</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
+                    <p>AS Monaco - Montpellier FC</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
-                    <p>Bordeaux - Dijon</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
+                    <p>FC Nantes - FC Lorient</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
 
@@ -288,71 +326,71 @@
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
             <ul class="ligneParis">
                 <li class="horraire">8 H</li>
                 <li class="infoParis">
-                    <p><span class="ballon"></span>Football, Coupe de France</p>
+                    <p><span class="ballon"></span>Football, Ligue 1</p>
                     <p>Bordeaux - Dijon</p>
                 </li>
-                <li class="vic">1.58</li>
-                <li class="vic">3.80</li>
-                <li class="vic">5.50</li>
+                <li class="vic"><a>1.58</a></li>
+                <li class="vic"><a>3.80</a></li>
+                <li class="vic"><a>5.50</a></li>
                 <li class="typePari">+76</li>
                 <li class="stat">
-                    <a href="#"><img src="img/stats.png"></a>
+                    <a href="#"><img src="../img/stats.png"></a>
                 </li>
             </ul>
 
@@ -433,7 +471,7 @@
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
         crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="./js/main.js" ></script>
+<script type="text/javascript" src="../js/main.js" ></script>
 <script type="text/javascript" src="../js/paris.js" ></script>
 </body>
 </html>

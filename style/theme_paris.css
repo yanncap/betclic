@@ -1,3 +1,6 @@
+.colorRed{
+    color: red;
+}
 .titreParis{
     text-align: center;
     margin-bottom: 50px;
@@ -18,22 +21,17 @@
 }
 
 #encadreValidationPari{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: inline-block;
     margin-top: 20px;
     width: 50%;
     border: 2px solid darkred;
     border-radius: 3px;
     padding: 10px;
+    width: 500px;
+    height: 250px;
 }
 
 #encadreConnection{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    display: inline-block;
+    display: none;
     margin-top: 20px;
     width: 49%;
     border: 2px solid darkred;
@@ -45,6 +43,10 @@
 }
 
 .spanMise{
+    margin-left: 70px;
+}
+#miseInput{
+    width: 100px;
 }
 
 .submitButton{
@@ -90,10 +92,8 @@
     background-color: white;
     position: fixed;
     left: 50%;
-    transform: translateX(-70%);
+    transform: translateX(-50%);
     border: 1px solid #D3D3D3;
-    width: 750px;
-    height: 300px;
     z-index: 1;
 }
 
