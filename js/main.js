@@ -8,6 +8,7 @@ var tabTitre2 = ["Paris SG - Lille","Strasbourg - Lyon", "Marseille - Barcelone"
 var interval;
 var target = 1;
 var NbrItemCarou = 5;
+var userCoo = false;
 
 $(function(){
     $(".menuMBouton").on("click", function(){lateral()});
@@ -55,8 +56,9 @@ function fausseConnection(choix){
         tempPassword = $("#passwordM").val();
     }
     if (tempPseudo != "" && tempPassword != ""){
+        userCoo = true;
         $("#titreCoo").html("Connecté !")
-        $(".liForm").html("<p>Bienvenue : "+tempPseudo+"</p><p>Votre Solde est de: 20.50€</p><a href=''>Se Déconnecter</a>");
+        $(".liForm").html("<p>Bienvenue : "+tempPseudo+"</p><p>Votre Solde est de: 20.50€</p><a href='html/comptePage.html'>Compte</a> / <a href=''>Se Déconnecter</a>");
     }
 }
 
