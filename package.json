@@ -1,0 +1,15 @@
+{
+  "name": "betclic",
+  "title": "betclic",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-css-urls": "^0.2.0",
+    "lite-server": "^2.2.2"
+  }
+}
